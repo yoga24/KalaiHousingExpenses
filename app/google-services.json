@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "663545120501",
+    "firebase_url": "https://kalai-housing-expenses.firebaseio.com",
+    "project_id": "kalai-housing-expenses",
+    "storage_bucket": "kalai-housing-expenses.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663545120501:android:8d877fd0dbb15b6d",
+        "android_client_info": {
+          "package_name": "com.cyorg.example.kalaihousingexpenses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663545120501-peftiiammoa6dh5af5q1ua5idb98s947.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cyorg.example.kalaihousingexpenses",
+            "certificate_hash": "21C2F544A471A04093B5E47ED0C59B2ADCF74C6D"
+          }
+        },
+        {
+          "client_id": "663545120501-714jm51bjk6fookl0s8sr5o8u9khr48c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmkjJFpiP5Fdl-ztxXkfqzsGxHRtNhCSI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663545120501-714jm51bjk6fookl0s8sr5o8u9khr48c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

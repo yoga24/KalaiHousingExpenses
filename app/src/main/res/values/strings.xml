@@ -1,0 +1,16 @@
+<resources>
+    <!-- App Essentials #START -->
+    <string name="app_name">Kalai Housing Expenses</string>
+
+    <string name="shared_pref_name">MyPreferences</string>
+    <!-- App Essentials #START -->
+
+
+    <!-- Preferences keys #START-->
+    <string name="pref_login_check_key">IsLoginNeeded</string>
+    <string name="pref_login_check_default">false</string>
+
+    <string name="pref_logged_in_user_key">LoggedInUser</string>
+    <!-- Preferences keys #END-->
+
+</resources>
