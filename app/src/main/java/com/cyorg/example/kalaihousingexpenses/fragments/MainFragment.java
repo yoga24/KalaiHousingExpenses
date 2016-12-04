@@ -1,22 +1,19 @@
 package com.cyorg.example.kalaihousingexpenses.fragments;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cyorg.example.kalaihousingexpenses.R;
 import com.cyorg.example.kalaihousingexpenses.model.MaterialExpense;
 import com.cyorg.example.kalaihousingexpenses.utils.CommonUtils;
-import com.cyorg.example.kalaihousingexpenses.utils.FirebaseRefManager;
-import com.firebase.client.Firebase;
+import com.cyorg.example.kalaihousingexpenses.firebase.FirebaseRefManager;
 import com.firebase.ui.database.FirebaseListAdapter;
 
 /**

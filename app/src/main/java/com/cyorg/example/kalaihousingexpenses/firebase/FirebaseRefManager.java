@@ -1,5 +1,6 @@
-package com.cyorg.example.kalaihousingexpenses.utils;
+package com.cyorg.example.kalaihousingexpenses.firebase;
 
+import com.cyorg.example.kalaihousingexpenses.utils.ExpenseConstants;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
