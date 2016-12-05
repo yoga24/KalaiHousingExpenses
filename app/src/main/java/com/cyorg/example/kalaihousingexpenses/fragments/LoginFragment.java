@@ -3,6 +3,7 @@ package com.cyorg.example.kalaihousingexpenses.fragments;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.cyorg.example.kalaihousingexpenses.R;
+import com.cyorg.example.kalaihousingexpenses.activity.ExpensesActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -52,7 +54,7 @@ public class LoginFragment extends Fragment {
                 if (user != null) {
                     // User is signed in
                     parentActivity.getSharedPreferences(getString(R.string.shared_pref_name), Context.MODE_PRIVATE).edit().putString(getString(R.string.pref_logged_in_user_key),user.getEmail().split("@")[0]).commit();
-                    callSuccessLoginFragment();
+                    startExpensesActivity();
                     Log.i(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
@@ -62,8 +64,11 @@ public class LoginFragment extends Fragment {
         };
     }
 
-    private void callSuccessLoginFragment() {
-        parentActivity.getFragmentManager().beginTransaction().replace(R.id.main_container,new MainFragment()).commit();
+    private void startExpensesActivity() {
+        //parentActivity.getFragmentManager().beginTransaction().replace(R.id.main_container,new MainFragment()).commit();
+
+        startActivity(new Intent(parentActivity, ExpensesActivity.class));
+
     }
 
     @Nullable
@@ -94,7 +99,7 @@ public class LoginFragment extends Fragment {
                                         //Toast.makeText(parentActivity, "LOGIN SUCCESSFUL", Toast.LENGTH_LONG).show();
                                         String[] user = username.getText().toString().split("@");
                                         parentActivity.getSharedPreferences(getString(R.string.shared_pref_name), Context.MODE_PRIVATE).edit().putString(getString(R.string.pref_logged_in_user_key),user[0]).commit();
-                                        callSuccessLoginFragment();
+                                        startExpensesActivity();
                                     }
 
                                     // If sign in fails, display a message to the user. If sign in succeeds

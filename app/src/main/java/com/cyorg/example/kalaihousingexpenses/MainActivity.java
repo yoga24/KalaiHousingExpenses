@@ -1,5 +1,6 @@
 package com.cyorg.example.kalaihousingexpenses;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -7,13 +8,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+import android.widget.Toolbar;
 
+import com.cyorg.example.kalaihousingexpenses.activity.ExpensesActivity;
 import com.cyorg.example.kalaihousingexpenses.fragments.LoginFragment;
 import com.cyorg.example.kalaihousingexpenses.fragments.MainFragment;
 import com.cyorg.example.kalaihousingexpenses.fragments.SuccessFragment;
 import com.firebase.client.Firebase;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private FragmentManager fragmentManager;
 
@@ -33,12 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        LoginFragment loginFragment = new LoginFragment();
 
         if(!isUserLoggedIn) {
-            fragmentTransaction.add(R.id.main_container, new LoginFragment(), "LOGIN_FRAG");
+            fragmentTransaction.add(R.id.main_container, loginFragment, "LOGIN_FRAG");
         }   else    {
-            fragmentTransaction.add(R.id.main_container, new MainFragment(), "MAIN_FRAG");
-            //new Intent(MainActivity.this,)
+            //fragmentTransaction.add(R.id.main_container, new MainFragment(), "MAIN_FRAG");
+                fragmentTransaction.remove(loginFragment);
+                startActivity(new Intent(MainActivity.this, ExpensesActivity.class));
         }
         fragmentTransaction.commit();
 

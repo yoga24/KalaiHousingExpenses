@@ -1,6 +1,8 @@
 package com.cyorg.example.kalaihousingexpenses.fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.cyorg.example.kalaihousingexpenses.R;
 import com.cyorg.example.kalaihousingexpenses.firebase.FirebaseRefManager;
@@ -19,13 +22,22 @@ import com.firebase.ui.database.FirebaseListAdapter;
 /**
  * Created by HCL on 12/4/2016.
  */
-public class MaterialExpensesFragment extends Fragment{
+public class MaterialExpensesFragment extends Fragment {
 
     private static final String LOG_TAG = MaterialExpensesFragment.class.getSimpleName();
     public static final String FRAGMENT_TAG = MaterialExpensesFragment.class.getSimpleName();
 
+    private Activity parentActivity;
 
     ListView listView;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Activity) {
+            parentActivity = (Activity) context;
+        }
+    }
 
     @Nullable
     @Override
@@ -36,6 +48,10 @@ public class MaterialExpensesFragment extends Fragment{
         //Get ListVIew from Fragment
         listView = (ListView) rootView.findViewById(R.id.frag_main_list_view);
 
+
+
+        parentActivity.getActionBar().setTitle("Expenses");
+        parentActivity.getActionBar().setSubtitle("MaterialExpenses");
 
         //Initialize FragmentListAdapter and Populate view
         FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.list_item, FirebaseRefManager.MATERIAL_REF) {

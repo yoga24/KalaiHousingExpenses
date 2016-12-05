@@ -1,16 +1,11 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Default Theme. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="ExpenseAppTheme" parent="@android:style/Theme.Material.NoActionBar">
 
-        <!--<item name="colorPrimaryDark">#0097A7</item>
-        <item name="colorPrimary">#000</item>
-        <item name="colorAccent">#0097A7</item>-->
-
+        <item name="colorPrimaryDark">@color/customColorPrimaryDark</item>
+        <item name="colorPrimary">@color/customColorPrimary</item>
+        <item name="colorAccent">@color/customColorAccent</item>
 
     </style>
 

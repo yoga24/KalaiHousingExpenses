@@ -5,7 +5,11 @@
     <color name="colorAccent">#FF4081</color>
 
 
-    <color name="customColorAccent">#0097A7</color>
+    <color name="customColorPrimary">#009688</color>
+    <color name="customColorPrimaryDark">#B2DFDB</color>
+    <color name="customColorBackground">#B2DFDB</color>
+    <color name="customColorAccent">#B2DFDB</color>
+
 
 
 </resources>
