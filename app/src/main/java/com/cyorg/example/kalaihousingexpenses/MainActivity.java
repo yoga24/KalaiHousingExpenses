@@ -19,9 +19,7 @@ import com.firebase.client.Firebase;
 public class MainActivity extends Activity {
 
     private FragmentManager fragmentManager;
-
     private Firebase mRef;
-
     private ListView listView;
 
     @Override

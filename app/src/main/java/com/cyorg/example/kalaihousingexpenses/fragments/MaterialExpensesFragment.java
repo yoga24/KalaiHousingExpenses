@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ public class MaterialExpensesFragment extends Fragment {
     private static final String LOG_TAG = MaterialExpensesFragment.class.getSimpleName();
     public static final String FRAGMENT_TAG = MaterialExpensesFragment.class.getSimpleName();
 
-    private Activity parentActivity;
+    private AppCompatActivity parentActivity;
 
     ListView listView;
 
@@ -35,7 +36,7 @@ public class MaterialExpensesFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof Activity) {
-            parentActivity = (Activity) context;
+            parentActivity = (AppCompatActivity) context;
         }
     }
 
@@ -50,8 +51,8 @@ public class MaterialExpensesFragment extends Fragment {
 
 
 
-        parentActivity.getActionBar().setTitle("Expenses");
-        parentActivity.getActionBar().setSubtitle("MaterialExpenses");
+        parentActivity.getSupportActionBar().setTitle("Expenses");
+        parentActivity.getSupportActionBar().setSubtitle("MaterialExpenses");
 
         //Initialize FragmentListAdapter and Populate view
         FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.list_item, FirebaseRefManager.MATERIAL_REF) {

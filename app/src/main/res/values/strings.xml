@@ -13,4 +13,13 @@
     <string name="pref_logged_in_user_key">LoggedInUser</string>
     <!-- Preferences keys #END-->
 
+    <!-- Navigation drawer #START-->
+    <string name="navigation_expenses_material_title">Material Expenses</string>
+    <string name="navigation_expenses_labour_title">Labour Expenses</string>
+    <string name="navigation_expenses_all_title">All Expenses</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Navigation drawer #END-->
+
 </resources>

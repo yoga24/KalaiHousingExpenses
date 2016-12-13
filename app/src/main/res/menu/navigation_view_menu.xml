@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/navigation_expenses_group"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_expenses_material"
+            android:icon="@drawable/ic_material"
+            android:title="@string/navigation_expenses_material_title" />
+        <item
+            android:id="@+id/navigation_expenses_labour"
+            android:icon="@drawable/ic_labour"
+            android:title="@string/navigation_expenses_labour_title" />
+        <item
+            android:id="@+id/navigation_expenses_all"
+            android:icon="@drawable/ic_material"
+            android:title="@string/navigation_expenses_all_title" />
+
+    </group>
+
+</menu>
