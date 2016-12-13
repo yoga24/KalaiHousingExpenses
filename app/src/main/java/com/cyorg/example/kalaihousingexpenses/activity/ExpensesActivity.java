@@ -70,6 +70,7 @@ public class ExpensesActivity extends AppCompatActivity implements NavigationVie
                 return true;
 
             case R.id.navigation_expenses_all:
+                Log.i(LOG_TAG, "All Expenses Fragment needs to be called");
                 return false;
         }
 
