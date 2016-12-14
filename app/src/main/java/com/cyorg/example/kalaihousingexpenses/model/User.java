@@ -6,7 +6,7 @@ package com.cyorg.example.kalaihousingexpenses.model;
 public class User {
 
     private String username;
-    private String password;
+    private String userMail;
     private int accessLevel;
     private boolean adminApproved;
 
@@ -21,12 +21,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserMail() {
+        return userMail;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
     }
 
     public int getAccessLevel() {

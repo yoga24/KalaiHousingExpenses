@@ -5,6 +5,13 @@
     <string name="shared_pref_name">MyPreferences</string>
     <!-- App Essentials #START -->
 
+    <!-- Login #START-->
+    <string name="login_user_id_hint"></string>
+    <string name="login_user_password_hint"></string>
+    <string name="login_user_sign_in"></string>
+    <string name="login_user_sign_up"></string>
+    <string name="login_user_forgot_password"></string>
+    <!-- Login #END-->
 
     <!-- Preferences keys #START-->
     <string name="pref_login_check_key">IsLoginNeeded</string>
@@ -17,6 +24,8 @@
     <string name="navigation_expenses_material_title">Material Expenses</string>
     <string name="navigation_expenses_labour_title">Labour Expenses</string>
     <string name="navigation_expenses_all_title">All Expenses</string>
+
+    <string name="navigation_others_add_user_title">All Expenses</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

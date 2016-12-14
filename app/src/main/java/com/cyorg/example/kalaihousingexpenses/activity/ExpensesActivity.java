@@ -1,6 +1,5 @@
 package com.cyorg.example.kalaihousingexpenses.activity;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -32,7 +31,7 @@ public class ExpensesActivity extends AppCompatActivity implements NavigationVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expenses);
+        setContentView(R.layout.expenses_activity);
 
         toolbar = (Toolbar) findViewById(R.id.expenses_toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.expenses_drawer_layout);

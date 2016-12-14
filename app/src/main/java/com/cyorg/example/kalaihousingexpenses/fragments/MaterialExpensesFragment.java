@@ -6,13 +6,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.cyorg.example.kalaihousingexpenses.R;
 import com.cyorg.example.kalaihousingexpenses.firebase.FirebaseRefManager;
@@ -44,7 +42,7 @@ public class MaterialExpensesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.expenses_fragment, container, false);
 
         //Get ListVIew from Fragment
         listView = (ListView) rootView.findViewById(R.id.frag_main_list_view);
@@ -55,7 +53,7 @@ public class MaterialExpensesFragment extends Fragment {
         parentActivity.getSupportActionBar().setSubtitle("MaterialExpenses");
 
         //Initialize FragmentListAdapter and Populate view
-        FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.list_item, FirebaseRefManager.MATERIAL_REF) {
+        FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.expenses_list_item, FirebaseRefManager.MATERIAL_REF) {
             @Override
             protected void populateView(View v, MaterialExpense model, int position) {
                 TextView amtText = (TextView) v.findViewById(R.id.list_amt_text);

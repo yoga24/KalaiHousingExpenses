@@ -6,14 +6,10 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-import android.widget.Toolbar;
 
 import com.cyorg.example.kalaihousingexpenses.activity.ExpensesActivity;
 import com.cyorg.example.kalaihousingexpenses.fragments.LoginFragment;
-import com.cyorg.example.kalaihousingexpenses.fragments.MainFragment;
-import com.cyorg.example.kalaihousingexpenses.fragments.SuccessFragment;
 import com.firebase.client.Firebase;
 
 public class MainActivity extends Activity {
@@ -25,8 +21,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //setContentView(R.layout.fragment_main);
+        setContentView(R.layout.main_activity);
+        //setContentView(R.layout.expenses_fragment);
 
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.shared_pref_name),MODE_PRIVATE);
         boolean isUserLoggedIn = sharedPreferences.getBoolean(getString(R.string.pref_login_check_key),false);
@@ -50,7 +46,7 @@ public class MainActivity extends Activity {
 //
 //
 //        listView = (ListView) findViewById(R.id.frag_main_list_view);
-        //final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.list_item,R.id.list_item_text,users);
+        //final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.expenses_list_item,R.id.list_item_text,users);
         //listView.setAdapter(adapter);
 
 
@@ -108,7 +104,7 @@ public class MainActivity extends Activity {
 //        }
 //
 //
-//        FirebaseListAdapter<User> firebaseAdapter = new FirebaseListAdapter<User>(this,User.class,R.layout.list_item,qRef) {
+//        FirebaseListAdapter<User> firebaseAdapter = new FirebaseListAdapter<User>(this,User.class,R.layout.expenses_list_item,qRef) {
 //            @Override
 //            protected void populateView(View v, User model, int position) {
 //                Log.i("MainAct","Populating View");

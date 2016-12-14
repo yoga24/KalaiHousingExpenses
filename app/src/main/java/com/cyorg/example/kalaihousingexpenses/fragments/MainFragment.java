@@ -29,14 +29,14 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.expenses_fragment, container, false);
 
         //Get ListVIew from Fragment
         listView = (ListView) rootView.findViewById(R.id.frag_main_list_view);
 
 
         //Initialize FragmentListAdapter and Populate view
-        FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.list_item, FirebaseRefManager.MATERIAL_REF) {
+        FirebaseListAdapter<MaterialExpense> materialExpenseFirebaseListAdapter = new FirebaseListAdapter<MaterialExpense>(getActivity(), MaterialExpense.class, R.layout.expenses_list_item, FirebaseRefManager.MATERIAL_REF) {
             @Override
             protected void populateView(View v, MaterialExpense model, int position) {
                 Log.i(LOG_TAG,"Populating ModelExpenses View");

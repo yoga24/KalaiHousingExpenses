@@ -76,7 +76,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
 
-        View rootView = inflater.inflate(R.layout.fragment_login,container,false);
+        View rootView = inflater.inflate(R.layout.main_login_fragment,container,false);
 
         Log.i(TAG,"RootView created Successfully");
 

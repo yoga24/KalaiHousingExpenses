@@ -17,7 +17,16 @@
             android:id="@+id/navigation_expenses_all"
             android:icon="@drawable/ic_material"
             android:title="@string/navigation_expenses_all_title" />
+    </group>
 
+    <group
+        android:id="@+id/navigation_others_group"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_others_add_user"
+            android:icon="@drawable/ic_add_user"
+            android:title="@string/navigation_others_add_user_title" />
     </group>
 
 </menu>
